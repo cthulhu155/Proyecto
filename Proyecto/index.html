@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Tenis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="logo.jpeg">
+</head>
+<body>
+    <div class="site-content">
+    <header>
+        <nav>
+            <ul>
+                <li class="Inicio"><a href="index.html"><img src="logo.jpeg" alt="Inicio"></a></li>    
+                <li><a href="men.html">MEN</a></li>
+                <li><a href="women.html">WOMEN</a></li>
+                <li><a href="kids.html">KIDS</a></li>
+                <li class="carrito"><a href="carrito.html"><img src="carrito.png" alt="Carrito"><span id="cart-count">0</span></a></li>
+                <li><a href="login.html" class="login-button"><i class="fas fa-user fa-xl"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a Nuestra Tienda de Tenis</h1>
+            <p>Las mejores marcas y modelos a tu alcance</p>
+        </section>
+        
+        <section class="filtros">
+            <input type="text" id="search-bar" placeholder="Buscar...">
+            <select id="category-filter">
+                <option value="all">Todas las Categorías</option>
+                <option value="running">Running</option>
+                <option value="casual">Casual</option>
+                <option value="soccer">Soccer</option>
+                <option value="basketball">Basketball</option>
+                <option value="tennis">Tennis</option>
+                <option value="golf">Golf</option>
+            </select>
+        </section>
+        
+        <section class="productos-destacados">
+            <h2>Productos Destacados</h2>
+            <!-- Lista de productos -->
+            <!-- Asegúrate de reemplazar las URLs con las de tus imágenes de productos -->
+            <div class="producto" data-category="basketball">
+                <img src="https://www.innvictus.com/medias/tenis-nike-air-jordan-1-retro-high-og-in-555088-602-1.png?context=bWFzdGVyfGltYWdlc3wyNjMyM3xpbWFnZS9wbmd8aW1hZ2VzL2hiMC9oMGQvMTAxMDQyNTM4NDE0MzgucG5nfDZjMDc1ZDEzZDA0YTJmN2IwNjE0MTQxZWYxNmQyOWVlNzBkYTgwYWFkOTRjMDM3OGNiNzlhOTVkZGRhMTI1NTQ" alt="Air Jordan 1">
+                <h3>Air Jordan 1</h3>
+                <p>$250.00</p>
+                <button class="add-to-cart" data-id="1">Añadir al Carrito</button>
+            </div>
+            <div class="producto" data-category="basketball">
+                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/b5a90b99-e0bc-44df-83e6-725b0aaeedc5/fecha-de-lanzamiento-del-air-jordan-3-fire-red-dn3707-160.jpg" alt="Air Jordan 3">
+                <h3>Air Jordan 3</h3>
+                <p>$200.00</p>
+                <button class="add-to-cart" data-id="2">Añadir al Carrito</button>
+            </div>
+            <div class="producto" data-category="casual">
+                <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6a3671b8-f115-44f6-9ab6-3798d55210eb/custom-nike-air-max-97-shoes-by-you.png" alt="Tenis 3">
+                <h3>Air max 97</h3>
+                <p>$120.00</p>
+                <button class="add-to-cart" data-id="3">Añadir al Carrito</button>
+            </div>
+            <div class="producto" data-category="casual">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKof5LoKz624d6Az4NKS3_DOaOotBXfRJog&s" alt="Tenis 4">
+                <h3>Adidas gazelle</h3>
+                <p>$95.00</p>
+                <button class="add-to-cart" data-id="4">Añadir al Carrito</button>
+            </div>
+            <div class="producto" data-category="running">
+                <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/9f684ace-3163-4227-8f85-2d2a067dd4f5/calzado-air-max-90-gore-tex-DQ1mbQ.png" alt="Tenis 5">
+                <h3>Airmax 90</h3>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-id="5">Añadir al Carrito</button>
+            </div>  
+            <div class="producto" data-category="running">
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/ae75e8599c6146e9985faf150187bbac_9366/Tenis_Ultraboost_1.0_Blanco_HQ2163_01_standard.jpg" alt="Tenis 6">
+                <h3>Adidas Ultraboost 1.0</h3>
+                <p>$150.00</p>
+                <button class="add-to-cart" data-id="6">Añadir al Carrito</button>
+            </div>  
+            <div class="producto" data-category="sneakers">
+                <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/fc6e70fa11ee4c24aa0b297bfababda0_9366/Tenis_Ultraboost_1.0_Gris_ID9675_01_standard.jpg" alt="Tenis 7">
+                <h3>Adidas Ultraboost 1.0 Negro</h3>
+                <p>$150.00</p>
+                <button class="add-to-cart" data-id="7">Añadir al Carrito</button>
+            </div>  
+            <div class="producto" data-category="casual">
+                <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/f12828e0-6093-43da-9202-a4064486d491/tenis-air-max-90-nkr3dc.png" alt="Tenis 8">
+                <h3>Airmax 90 </h3>
+                <p>$80.00</p>
+                <button class="add-to-cart" data-id="8">Añadir al Carrito</button>
+            </div>  
+            <div class="producto" data-category="running">
+                <img src="https://ar.puma.com/media/contentmanager/content/391962_01.jpg" alt="Tenis 9">
+                <h3>Puma Suede</h3>
+                <p>$70.00</p>
+                <button class="add-to-cart" data-id="9">Añadir al Carrito</button>
+            </div>  
+            <div class="producto" data-category="running">
+                <img src="https://images.stockx.com/360/Yeezy-Slide-Bone/Images/Yeezy-Slide-Bone/Lv2/img01.jpg?fm=webp&auto=compress&w=480&dpr=2&updated_at=1635191602&h=320&q=60" alt="Tenis 10">
+                <h3>Adidas Yeezy Slides</h3>
+                <p>$100.00</p>
+                <button class="add-to-cart" data-id="10">Añadir al Carrito</button>
+            </div>  
+            <div class="producto" data-category="running">
+                <img src="https://cdn1.coppel.com/images/catalog/pr/8546782-1.jpg" alt="Tenis 10">
+                <h3>Asics Gel-Excite 10</h3>
+                <p>$130.00</p>
+                <button class="add-to-cart" data-id="11">Añadir al Carrito</button>
+            </div>  
+            <!-- Agrega más productos según necesites -->
+        </section>
+
+        <section class="Carrito de compras">
+            <h2>Carrito de Compras</h2>
+            <div id="cart-container"></div>
+            <button id="checkout-button">Pagar con Stripe</button>
+        </section>
+    </main>
+</div>
+    <footer>
+        <p>&copy; 2024 Venta de Tenis. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
