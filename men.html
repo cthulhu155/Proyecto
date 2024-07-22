@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men - Venta de Tenis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="logo.jpeg">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="Inicio"><a href="index.html"><img src="logo.jpeg" alt="Inicio"></a></li>
+                <li><a href="men.html">MEN</a></li>
+                <li><a href="women.html">WOMEN</a></li>
+                <li><a href="kids.html">KIDS</a></li>
+                <li class="carrito"><a href="carrito.html"><img src="carrito.png" alt="Carrito"><span id="cart-count">0</span></a></li>
+                <li><a href="login.html" class="login-button"><i class="fas fa-user fa-xl"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Men's Collection</h1>
+            <p>Discover the latest styles and trends in men's footwear</p>
+        </section>
+        <section class="filtros">
+            <input type="text" id="search-bar" placeholder="Buscar...">
+            <select id="category-filter">
+                <option value="all">Todas las Categorías</option>
+                <option value="running">Running</option>
+                <option value="casual">Casual</option>
+                <option value="soccer">Soccer</option>
+                <option value="basketball">Basketball</option>
+                <option value="tennis">Tennis</option>
+                <option value="golf">Golf</option>
+            </select>
+        </section>
+        <section class="filtros">
+            <input type="text" id="search-bar" placeholder="Buscar...">
+            <select id="category-filter">
+                <option value="all">Todas las Categorías</option>
+                <option value="running">Running</option>
+                <option value="casual">Casual</option>
+                <option value="soccer">Soccer</option>
+                <option value="basketball">Basketball</option>
+                <option value="tennis">Tennis</option>
+                <option value="golf">Golf</option>
+            </select>
+        </section>
+        
+        <section class="productos">
+            <h2>For Men</h2>
+            <div class="producto">
+                <img src="https://www.innvictus.com/medias/tenis-nike-air-jordan-1-retro-high-og-in-555088-602-1.png?context=bWFzdGVyfGltYWdlc3wyNjMyM3xpbWFnZS9wbmd8aW1hZ2VzL2hiMC9oMGQvMTAxMDQyNTM4NDE0MzgucG5nfDZjMDc1ZDEzZDA0YTJmN2IwNjE0MTQxZWYxNmQyOWVlNzBkYTgwYWFkOTRjMDM3OGNiNzlhOTVkZGRhMTI1NTQ" alt="Tenis 1">
+                <h3>Air Jordan 1</h3>
+                <p>$250.00</p>
+                <button class="add-to-cart" data-id="1">Añadir al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/b5a90b99-e0bc-44df-83e6-725b0aaeedc5/fecha-de-lanzamiento-del-air-jordan-3-fire-red-dn3707-160.jpg" alt="Tenis 2">
+                <h3>Air Jordan 3</h3>
+                <p>$200.00</p>
+                <button class="add-to-cart" data-id="2">Añadir al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/6a3671b8-f115-44f6-9ab6-3798d55210eb/custom-nike-air-max-97-shoes-by-you.png" alt="Tenis 3">
+                <h3>Air max 97</h3>
+                <p>$120.00</p>
+                <button class="add-to-cart" data-id="3">Añadir al Carrito</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Venta de Tenis. Todos los derechos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
